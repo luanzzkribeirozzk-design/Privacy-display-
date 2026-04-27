@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PrivacyDisplay" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">#AA00FF</item>
+        <item name="colorPrimaryDark">#150030</item>
+        <item name="colorAccent">#CC66FF</item>
+        <item name="android:windowBackground">@drawable/bg_main</item>
+        <item name="android:statusBarColor">#0A0020</item>
+        <item name="android:navigationBarColor">#0A0020</item>
+    </style>
+</resources>
