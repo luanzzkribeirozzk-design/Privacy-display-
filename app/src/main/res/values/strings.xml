@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_internal">LN Display</string>
+    <string name="app_name_external">PRIVACY DISPLAY</string>
+    <string name="tile_label">Privacy Display</string>
+</resources>
