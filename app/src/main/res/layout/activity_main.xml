@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
+
+    <!-- Animated Snow Canvas -->
+    <com.lndisplay.privacydisplay.SnowView
+        android:id="@+id/snowView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="28dp"
+            android:paddingTop="60dp"
+            android:paddingBottom="48dp">
+
+            <!-- Logo & Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LN DISPLAY"
+                android:textColor="#CC99FF"
+                android:textSize="13sp"
+                android:letterSpacing="0.35"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privacy Display"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:shadowColor="#AA00FF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="20" />
+
+            <!-- Status Badge -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● INATIVO"
+                android:textColor="#AA44FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+
+            <!-- Phone Mockup Card -->
+            <FrameLayout
+                android:layout_width="180dp"
+                android:layout_height="280dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/phone_glow" />
+
+                <View
+                    android:id="@+id/phoneScreen"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/phone_screen" />
+
+                <com.lndisplay.privacydisplay.MiniPrivacyPreview
+                    android:id="@+id/miniPreview"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+            <!-- Main Toggle Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/card_bg"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Privacy Display"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fica ativo em segundo plano"
+                        android:textColor="#9966CC"
+                        android:textSize="13sp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switchPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_track" />
+
+            </LinearLayout>
+
+            <!-- Privacy Level Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="20dp"
+                android:layout_marginTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="14dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nível de Privacidade"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLevelLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="70%"
+                        android:textColor="#CC99FF"
+                        android:textSize="13sp"
+                        android:fontFamily="monospace" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBarPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="70"
+                    android:progressTint="#AA00FF"
+                    android:thumbTint="#CC66FF"
+                    android:progressBackgroundTint="#3D1A6B" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Baixo"
+                        android:textColor="#7744AA"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Máximo"
+                        android:textColor="#7744AA"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg_dim"
+                android:padding="18dp"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="❄  Como funciona"
+                    android:textColor="#CC99FF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Escurece as bordas da tela\n• Quem olha de lado ou de cima não vê\n• Fica ativo mesmo fechando o app\n• Ajuste o nível pela barra acima\n• Use a Central de Controle para ativar rápido"
+                    android:textColor="#9977BB"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.6" />
+
+            </LinearLayout>
+
+            <!-- Quick Settings hint -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💜  Adicione o atalho na Central de Controle"
+                android:textColor="#6633AA"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
